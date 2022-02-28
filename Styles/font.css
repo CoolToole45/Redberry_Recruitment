@@ -8,3 +8,8 @@
     src: url(../Fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
     font-weight: 400;
 }
+
+@font-face {
+    font-family: "Montserrat-Italic";
+    src: url(../Fonts/Montserrat/static/Montserrat-LightItalic.ttf);
+}
