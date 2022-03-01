@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="Styles/font.css">
     <script src="app.js" defer></script>
 </head>
-<body>
+<body onload="renderPersonalInfo()">
     <!-- Container for the entire questionnaire -->
     <section class="questionnaire-container">
         <div class="left-side flex-column-center">
             <div class="left-title">
-                <h2 id="left-title">Hey, Rocketeer, what are your coordinates?</h2>
+                <h2 id="left-title"></h2>
             </div>
             <div class="form-container">
                 <form action="" id="main-form">
@@ -25,15 +25,36 @@
                         <input type="text" name="" id="phone-number" placeholder="+995 5_ _ _ _">
                     </div>
 
-                    <div class="form-group flex-column-center" id="group-two">
-                        
+                    <div class="form-group flex-column-center hidden" id="group-two">
+
+                        <div class="select-dropdown">
+                            <select id="select-dropdown">
+                                <!-- <option value="" data-option></option> -->
+                            </select>
+                        </div>  
+
+                        <input type="text" name="years" id="years" placeholder="Experience Duration in Years">
+                        <button>Add Programming Language</button>
+                        <div class="skills-output">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group flex-column-center hidden" id="group-three">
+                        <p>how would you prefer to work?</p>
+                        <input type="radio" name="" id="">
+                        <label for="office">From Sairme Office</label>
+                        <input type="radio" name="" id="">
+                        <label for="home">From Home</label>
+                        <input type="radio" name="" id="">
+                        <label for="hybrid">hybrid</label>
                     </div>
                 </form>
                 <div class="Pagination">
                     <img src="Img/Previous.svg" alt="previous">
-                    <div class="elipse" id="elipse1"></div>
-                    <div class="elipse" id="elipse2"></div>
-                    <div class="elipse" id="elipse3"></div>
+                    <div class="elipse" id="elipse1" onclick="renderPersonalInfo()"></div>
+                    <div class="elipse" id="elipse2" onclick="renderTechnicalSkillset()"></div>
+                    <div class="elipse" id="elipse3" onclick="renderCovidStuff()"></div>
                     <div class="elipse" id="elipse4"></div>
                     <div class="elipse" id="elipse5"></div>
                     <img src="Img/Next.svg" id="next" alt="next">
@@ -42,12 +63,10 @@
         </div>
         <div class="right-side flex-column-center">
             <div class="right-title">
-                <h2 id="right-title">Redberry Origins</h2>
+                <h2 id="right-title"></h2>
             </div>
             <div class="right-text">
-                <p id="right-text">
-                    You watch “What? Where? When?” Yeah. Our founders used to play it. That’s where they got a question about a famous American author and screenwriter Ray Bradbury. Albeit, our CEO Gaga Darsalia forgot the exact name and he answered Ray Redberry. And at that moment, a name for a yet to be born company was inspired - Redberry 😇
-                </p>
+                <p id="right-text"></p>
             </div>
         </div>
     </section>
