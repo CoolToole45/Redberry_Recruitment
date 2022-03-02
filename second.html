@@ -18,6 +18,7 @@
             </div>
             <div class="form-container">
                 <form action="" id="main-form">
+                    <!-- Form First Section -->
                     <div class="form-group flex-column-center" id="group-one">
                         <input type="text" name="fname" id="first-name" placeholder="First Name">
                         <input type="text" name="lname" id="last-name" placeholder="Last Name">
@@ -25,29 +26,54 @@
                         <input type="text" name="" id="phone-number" placeholder="+995 5_ _ _ _">
                     </div>
 
+                    <!-- Form Second Section -->
                     <div class="form-group flex-column-center hidden" id="group-two">
-
                         <div class="select-dropdown">
                             <select id="select-dropdown">
-                                <!-- <option value="" data-option></option> -->
+                                <option value="SKills">Skills</option>
                             </select>
                         </div>  
-
                         <input type="text" name="years" id="years" placeholder="Experience Duration in Years">
-                        <button>Add Programming Language</button>
+                        <button id="add-skill" onclick="addSkillFN()">Add Programming Language</button>
                         <div class="skills-output">
-
+                            
                         </div>
                     </div>
 
-                    <div class="form-group flex-column-center hidden" id="group-three">
-                        <p>how would you prefer to work?</p>
-                        <input type="radio" name="" id="">
-                        <label for="office">From Sairme Office</label>
-                        <input type="radio" name="" id="">
-                        <label for="home">From Home</label>
-                        <input type="radio" name="" id="">
-                        <label for="hybrid">hybrid</label>
+                    <!-- Form Third Section -->
+                    <div class="form-group hidden" id="group-three">
+                        <div class="question">                            
+                            <p>how would you prefer to work?</p>
+                            <div class="option">
+                                <input type="radio" name="work">
+                                <label for="office">From Sairme Office</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="work">
+                                <label for="home">From Home</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="work">
+                                <label for="hybrid">hybrid</label>
+                            </div>
+                        </div>
+
+                        <div class="question">                            
+                            <p>Did you contact covid 19? :(</p>
+                            <div class="option">
+                                <input type="radio" name="hasCovid">
+                                <label for="office">Yes</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="hasCovid">
+                                <label for="home">No</label>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <p>When?</p>
+                            <input type="text" name="date" id="date" placeholder="Date">
+                        </div>
                     </div>
                 </form>
                 <div class="Pagination">
