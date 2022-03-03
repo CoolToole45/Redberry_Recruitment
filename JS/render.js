@@ -116,4 +116,5 @@ function renderRedberrianInsights() {
     document.getElementById('elipse4').style.opacity = 1
 
     document.querySelector('.right-side').style.height = "125vh";
+    // document.querySelector('.pagination').style.margin = "5rem";
 }
