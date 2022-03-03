@@ -1,0 +1,69 @@
+/* Landing Section */
+.landing-section {
+    height: 100vh;
+    background-color: #0C0D0E;
+    background-image: url(/Img/stars.png);
+}
+
+.title {
+    color: #FE3B1F;
+    font-size: 80px;
+    font-family: "Rowdies-Regular";
+    text-align: center; 
+    margin: 4rem 0;
+}
+
+.controls {
+    margin: 2.5rem 0;
+}
+
+.controls button {
+    color: white;
+    background-color: #FE3B1F;
+    padding: 1rem 5rem;
+    font-size: 24px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+}
+
+.controls button:hover {
+    background-color: #962817;
+}
+
+.controls a {
+    color: #FFFFFF;
+    font-size: 24px;
+    margin: 2rem 0;
+}
+
+.controls button a {
+    text-decoration: none;
+}
+
+.main-Img {
+    width: 20%;
+    animation-name: 'float';
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.main-Img img {
+    transform: rotateZ(10deg);
+    width: 100%;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(35px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

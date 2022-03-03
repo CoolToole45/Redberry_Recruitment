@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redberry Recruitment</title>
-    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/form.css">
+    <link rel="stylesheet" href="Styles/global.css">
     <link rel="stylesheet" href="Styles/font.css">
+    <script src="JS/render.js" defer></script>
+    <script src="JS/skillSet.js" defer></script>
     <script src="app.js" defer></script>
 </head>
 <body onload="renderPersonalInfo()">
@@ -62,27 +65,70 @@
                             <p>Did you contact covid 19? :(</p>
                             <div class="option">
                                 <input type="radio" name="hasCovid">
-                                <label for="office">Yes</label>
+                                <label for="covYes">Yes</label>
                             </div>
                             <div class="option">
                                 <input type="radio" name="hasCovid">
-                                <label for="home">No</label>
+                                <label for="covNo">No</label>
                             </div>
                         </div>
 
                         <div class="question">
                             <p>When?</p>
                             <input type="text" name="date" id="date" placeholder="Date">
+                            <img src="Img/calendar.svg" class="first-calendar" alt="calendar">
+                        </div>
+
+                        <div class="question">
+                            <p>Have you been vaccinated?</p>
+                            <div class="option">
+                                <input type="radio" name="vac" id="">
+                                <label for="vacYes">Yes</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="vac" id="">
+                                <label for="vacNo">No</label>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <p>When did you get your last covid vaccine?</p>
+                            <input type="text" name="date" id="date" placeholder="Date">
+                            <img src="Img/calendar.svg" class="second-calendar" alt="calendar">
+                        </div>
+                    </div>
+
+                    <div class="form-group hidden" id="group-four">
+                        <div class="question">
+                            <p>Would you attend Devtalks and maybe also organize your own?</p>
+                            <div class="option">
+                                <input type="radio" name="devTalk">
+                                <label for="devYes">Yes</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="devTalk">
+                                <label for="devNo">No</label>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <p>What would you speak about at Devtalk?</p>
+                            <textarea name="devText" id="dev-text" cols="50" rows="10" placeholder="I would..."></textarea>
+                        </div>
+
+                        <div class="question">
+                            <p>Tell us something special</p>
+                            <textarea name="special" id="special" cols="50" rows="5" placeholder="I..."></textarea>
                         </div>
                     </div>
                 </form>
-                <div class="Pagination">
+                <div class="pagination">
                     <img src="Img/Previous.svg" alt="previous">
                     <div class="elipse" id="elipse1" onclick="renderPersonalInfo()"></div>
                     <div class="elipse" id="elipse2" onclick="renderTechnicalSkillset()"></div>
                     <div class="elipse" id="elipse3" onclick="renderCovidStuff()"></div>
-                    <div class="elipse" id="elipse4"></div>
-                    <div class="elipse" id="elipse5"></div>
+                    <div class="elipse" id="elipse4" onclick="renderRedberrianInsights()"></div>
+                    <a href="submit.html" class="elipse" id="elipse5"></a>
                     <img src="Img/Next.svg" id="next" alt="next">
                 </div>
             </div>
