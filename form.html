@@ -7,10 +7,9 @@
     <title>Redberry Recruitment</title>
     <link rel="stylesheet" href="Styles/form.css">
     <link rel="stylesheet" href="Styles/global.css">
-    <link rel="stylesheet" href="Styles/font.css">
     <script src="JS/render.js" defer></script>
     <script src="JS/skillSet.js" defer></script>
-    <script src="app.js" defer></script>
+    <script src="JS/validate.js" defer></script>
 </head>
 <body onload="renderPersonalInfo()">
     <!-- Container for the entire questionnaire -->
@@ -20,17 +19,29 @@
                 <h2 id="left-title"></h2>
             </div>
             <div class="form-container">
-                <form action="" id="main-form">
+                <form method="post" action="https://bootcamp-2022.devtest.ge/api/application" id="main-form" name="main-form">
                     <!-- Form First Section -->
                     <div class="form-group flex-column-center" id="group-one">
-                        <input type="text" name="fname" id="first-name" placeholder="First Name">
-                        <span class="errorMS">ERROR!</span>
-                        <input type="text" name="lname" id="last-name" placeholder="Last Name">
-                        <span class="errorMS">ERROR!</span>
-                        <input type="email" name="" id="email" placeholder="E Mail">
-                        <span class="errorMS">ERROR!</span>
-                        <input type="text" name="" id="phone-number" placeholder="+995 5_ _ _ _">
-                        <span class="errorMS">ERROR!</span>
+                        <div class="inp-container">
+                            <input type="text" name="fname" id="first-name" placeholder="First Name" onsubmit="validatefName(2)">
+                            <span class="form-error-message"></span>
+                        </div>
+                        <!-- <span class="errorMS invisible">*ERROR!</span> -->
+                        <div class="inp-container">
+                            <input type="text" name="lname" id="last-name" placeholder="Last Name">
+                            <span class="form-error-message"></span>
+                        </div>
+                        <!-- <span class="errorMS invisible">*ERROR!</span> -->
+                        <div class="inp-container">
+                            <input type="email" name="email" id="email" placeholder="E Mail">
+                            <span class="form-error-message"></span>
+                        </div>
+                        <!-- <span class="errorMS invisible">*ERROR!</span> -->
+                        <div class="inp-container">
+                            <input type="text" name="number" id="phone-number" placeholder="+995 5_ _ _ _">
+                            <span class="form-error-message"></span>
+                        </div>
+                        <!-- <span class="errorMS invisible">*ERROR!</span> -->
                     </div>
 
                     <!-- Form Second Section -->
@@ -132,7 +143,7 @@
                     <div class="elipse" id="elipse2" onclick="renderTechnicalSkillset()"></div>
                     <div class="elipse" id="elipse3" onclick="renderCovidStuff()"></div>
                     <div class="elipse" id="elipse4" onclick="renderRedberrianInsights()"></div>
-                    <a href="submit.html" class="elipse" id="elipse5"></a>
+                    <div class="elipse" id="elipse5" onclick="renderSubmit()"></div>
                     <img src="Img/Next.svg" id="next" alt="next">
                 </div>
             </div>
@@ -144,6 +155,10 @@
             <div class="right-text">
                 <p id="right-text"></p>
             </div>
+        </div>
+        <div class="form-submit flex-column-center hidden">
+            <button id="submitBtn" form="main-form">Submit</button>
+            <a href="form.html">go back</a>
         </div>
     </section>
 </body>

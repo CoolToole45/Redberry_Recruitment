@@ -116,5 +116,12 @@ function renderRedberrianInsights() {
     document.getElementById('elipse4').style.opacity = 1
 
     document.querySelector('.right-side').style.height = "125vh";
-    // document.querySelector('.pagination').style.margin = "5rem";
+}
+
+
+function renderSubmit() {
+    document.querySelector('.left-side').style.display = 'none'
+    document.querySelector('.right-side').style.display = 'none'
+
+    document.querySelector('.form-submit').classList.remove('hidden');
 }
